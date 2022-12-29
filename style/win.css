@@ -1,0 +1,60 @@
+.win-page {
+    border-radius: 10px;
+    position: fixed;
+    background-color: #edeaeaf3;
+    height: 40%;
+    width: 30%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    z-index: 100;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    animation: ease fadeIn 0.15s;
+}
+
+.win-page h2 {
+    margin: 0;
+    text-align: center;
+    width: 60%;
+    font-family: 'Chivo Mono', monospace;
+
+}
+
+#play-again {
+    width: 37%;
+    height: 14%;
+    border-radius: 5px;
+    margin-top: 20%;
+    background-color: #F2E5E5;
+    font-family: 'Chivo Mono', monospace;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+#play-again:hover {
+    cursor: pointer;
+    background-color: #e7cccc;
+    transition-duration: 0.15s;
+}
+
+#play-again:active {
+    background-color: #cfb6b6;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
