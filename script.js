@@ -2,7 +2,9 @@ let clickBox = document.querySelectorAll(".box");
 let display1 = document.getElementById("player1");
 let display2 = document.getElementById("player2");
 let again = document.getElementById("play-again");
+let start = document.getElementById("start");
 let blur = document.querySelector(".main");
+let startPage = document.querySelector(".start-page");
 let winPage = document.querySelector(".win-page");
 
 const gameBoard = [
@@ -14,11 +16,13 @@ const gameBoard = [
 const Play = () => {
 
     const player1 = {
+        name: "Player 1",
         turn: true,
         sign: "x"
     };
 
     const player2 = {
+        name: "Player 2",
         turn: false,
         sign: "o"
     };
@@ -41,7 +45,7 @@ const Play = () => {
                 clickBox.forEach(box => {
                     box.removeEventListener('click', myFunction);
                 });
-                display2.textContent = "Player 1 Wins";
+                display2.textContent = player1.name + " Wins";
 
                 playAgain();
             }
@@ -71,7 +75,7 @@ const Play = () => {
                 clickBox.forEach(box => {
                     box.removeEventListener('click', myFunction);
                 });
-                display1.textContent = "Player 2 Wins";
+                display1.textContent = player2.name + " Wins";
                 playAgain();
             }
 
@@ -131,6 +135,10 @@ const Play = () => {
             }
         }
 
+        if (checkWin()) {
+            return false;
+        }
+
         return true;
     }
 
@@ -146,6 +154,7 @@ function myFunction() {
 
 }
 
+// Wait 800ms then show play again screen
 function delay(time) {
     return new Promise(resolve => setTimeout(resolve, time));
 }
@@ -182,12 +191,35 @@ function restart() {
 
     display1.style.display = "block";
     display2.style.display = "none";
-    display1.textContent = "Player 1's turn [x]";
-    display2.textContent = "Player 2's turn [o]";
+    display1.textContent = run.player1.name + "'s turn [x]";
+    display2.textContent = run.player2.name + "'s turn [o]";
+}
+
+function starting() {
+    startPage.classList.remove("slide-in");
+    startPage.classList.add("slide-out");
+
+    playAgain2();
+    function delay(time) {
+        return new Promise(resolve => setTimeout(resolve, time));
+    }
+
+    async function playAgain2() {
+
+        await delay(150);
+        startPage.style.display = "none";
+
+    }
+
 }
 
 // Main Code
 let run = Play();
+
+display1.textContent = run.player1.name + "'s turn [x]";
+display2.textContent = run.player2.name + "'s turn [o]";
+
+start.addEventListener('click', starting);
 
 clickBox.forEach(box => {
     box.addEventListener('click', myFunction);

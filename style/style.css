@@ -53,6 +53,7 @@ h1 {
     font-family: 'Chivo Mono', monospace;
     display: flex;
     justify-content: center;
+    cursor: pointer;
 }
 
 .box:hover {

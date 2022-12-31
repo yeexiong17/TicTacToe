@@ -1,0 +1,61 @@
+.start-page {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #f2e5e5;
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slide-in {
+    animation: ease slideIn 0.75s;
+}
+
+.slide-out {
+    animation: ease slideOut 0.75s;
+}
+
+#start {
+    margin-top: 28%;
+    height: 7%;
+    width: 14%;
+    font-family: 'Chivo Mono', monospace;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 5px;
+    background-color: #efefef;
+}
+
+#start:hover {
+    cursor: pointer;
+    background-color: #e6d7d7;
+    transition-duration: 0.15s;
+}
+
+#start:active {
+    background-color: #cfb6b6;
+}
+
+@keyframes slideIn {
+    0% {
+        translate: 0 -200%;
+    }
+
+    100% {
+        translate: 0;
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        translate: 0;
+    }
+
+    100% {
+        translate: 0 -200%;
+    }
+}
