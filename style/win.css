@@ -20,8 +20,6 @@
     margin: 0;
     text-align: center;
     width: 60%;
-    font-family: 'Chivo Mono', monospace;
-
 }
 
 #play-again {
@@ -30,7 +28,6 @@
     border-radius: 5px;
     margin-top: 20%;
     background-color: #F2E5E5;
-    font-family: 'Chivo Mono', monospace;
     font-weight: 700;
     font-size: 1rem;
 }

@@ -16,7 +16,6 @@
 </head>
 
 <body>
-    <script src="script.js" defer></script>
 
     <div class="win-page">
         <h2>Do you want to play again?</h2>
@@ -28,6 +27,51 @@
 
             <div class="start-page slide-in">
                 <h1>Tic-Tac-Toe</h1>
+
+                <div class="players-container">
+                    <div class="player-1-container container-both">
+                        <h2>Player 1</h2>
+
+                        <div class="img-container">
+                            <div class="radio-button">
+                                <input type="radio" id="1-x" class="radio radio1" name="player-1" value="x">
+                                <label for="1-x"><img src="image/x.png" alt=""></label>
+                            </div>
+
+                            <div class="radio-button">
+                                <input type="radio" id="1-o" class="radio radio1" name="player-1" value="o">
+                                <label for="1-o"><img src="image/o.png" alt=""></label>
+                            </div>
+
+                            <div class="radio-button">
+                                <input type="radio" id="1-c" class="radio radio1" name="player-1" value="c">
+                                <label for="1-c"><img src="image/computer.jpg" alt=""></label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="player-2-container container-both">
+                        <h2>Player 2</h2>
+
+                        <div class="img-container">
+                            <div class="radio-button">
+                                <input type="radio" id="2-x" class="radio radio2" name="player-2" value="x">
+                                <label for="2-x"><img src="image/x.png" alt=""></label>
+                            </div>
+
+                            <div class="radio-button">
+                                <input type="radio" id="2-o" class="radio radio2" name="player-2" value="o">
+                                <label for="2-o"><img src="image/o.png" alt=""></label>
+                            </div>
+
+                            <div class="radio-button">
+                                <input type="radio" id="2-c" class="radio radio2" name="player-2" value="c">
+                                <label for="2-c"><img src="image/computer.jpg" alt=""></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <button id="start">Start</button>
             </div>
 
@@ -56,6 +100,6 @@
     </div>
 
 </body>
-
+<script src="script.js" defer></script>
 
 </html>

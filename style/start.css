@@ -11,6 +11,10 @@
     align-items: center;
 }
 
+.start-page h1 {
+    margin-top: 3%;
+}
+
 .slide-in {
     animation: ease slideIn 0.75s;
 }
@@ -19,11 +23,11 @@
     animation: ease slideOut 0.75s;
 }
 
+/* Start Button */
 #start {
-    margin-top: 28%;
+    margin-top: 15%;
     height: 7%;
     width: 14%;
-    font-family: 'Chivo Mono', monospace;
     font-weight: 700;
     font-size: 1rem;
     border-radius: 5px;
@@ -38,6 +42,64 @@
 
 #start:active {
     background-color: #cfb6b6;
+}
+
+/* Each player container for 3 buttons */
+.players-container {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
+
+label {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.radio-button {
+    display: flex;
+    width: 40%;
+    justify-content: center;
+}
+
+/* Container for radio, label, image */
+.img-container {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+}
+
+.img-container input {
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+}
+
+img {
+    aspect-ratio: 1;
+    cursor: pointer;
+    width: 75%;
+    margin: 8px;
+    border-radius: 5px;
+    border: 2px solid rgb(139, 138, 138);
+}
+
+img:hover {
+    box-shadow: 0px 0px 10px 3px rgb(90, 90, 90);
+}
+
+/* When radio is checked, style image */
+.radio:checked+label img {
+    transition-duration: 0.05s;
+    box-shadow: 0 0 8px 15px #f4aab9;
+}
+
+/* Container for each player text and radio */
+.container-both {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 @keyframes slideIn {

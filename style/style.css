@@ -1,3 +1,7 @@
+* {
+    font-family: 'Chivo Mono', monospace;
+}
+
 body {
     background-color: #f1dcdce0;
 }
@@ -19,7 +23,6 @@ main {
 
 h1 {
     font-size: 4rem;
-    font-family: 'Chivo Mono', monospace;
     margin-bottom: 2.5rem;
     margin-top: 1.5rem;
     color: #2B3A55;
@@ -27,7 +30,6 @@ h1 {
 
 .display-player #player1,
 .display-player #player2 {
-    font-family: 'Chivo Mono', monospace;
     font-size: 1.5rem;
     margin: 0;
     margin-bottom: 1rem;
@@ -50,7 +52,6 @@ h1 {
     aspect-ratio: 1;
     border: 1px solid rgb(76, 76, 76);
     font-size: 100px;
-    font-family: 'Chivo Mono', monospace;
     display: flex;
     justify-content: center;
     cursor: pointer;
